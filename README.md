@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
 Bootstrap - Modern business
 
 Helios UW site
@@ -36,4 +34,4 @@ Website for the Helios renewable energy student organization at the University o
 * [Yudai Yaguchi](#)
   * Role: Visualization Tool
   * Current Position: Student at UW-Madison
->>>>>>> 7a706d1238b6abe4ae7e5940ca953a071ff3b51c
+
