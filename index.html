@@ -5,6 +5,7 @@
 
   <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
 
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
@@ -27,14 +28,19 @@
   background: -webkit-linear-gradient(to right, #FCB529, #D82A2A);
   background: linear-gradient(to right, #FCB529, #D82A2A); padding:2px 0px 25px 0px;
 }
-.quote{
+#quote{
   margin-top: 10px;
-  text-align: center;
   font-weight: bold;
   font-size: 20px;
   display:block;
 }
 </style>
+
+<!-- Personal JS file -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="js/quote.js"></script>
+
+
 </head>
 
 <body>
@@ -112,8 +118,10 @@
 
 <!-- Quote Generator Box -->
 
-    <p class="breadcrumb quote">
+    <p class="breadcrumb" style="justify-content:center; margin-top:5px;">
+      <span id="quote" >
       Be purposeful
+    </span>
     </p>
 
     <!-- Features Section -->
