@@ -1,0 +1,84 @@
+/*!
+ * Start Bootstrap - Modern Business (https://startbootstrap.com/template-overviews/modern-business)
+ * Copyright 2013-2019 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-logomodern-business-nav/blob/master/LICENSE)
+ */
+body {
+  padding-top: 56px;
+}
+
+.carousel-item {
+  height: 65vh;
+  min-height: 300px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.portfolio-item {
+  margin-bottom: 30px;
+}
+
+.footer{
+  display: flex;
+  align-content: space-between;
+  width: 100%;
+  height: 7rem;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  justify-content: center;
+}
+
+.footer-item{
+  flex-grow: 1;
+  padding-top:3rem;
+  width:5%;
+}
+.Copyright{
+  flex-grow:4;
+  width:auto;
+  font-size:.8rem;
+  padding-top:3rem;
+}
+
+.social{
+  padding-top:1rem;
+  flex-grow:1;
+  display:grid;
+  grid-template-columns: 40px 40px;
+  grid-template-rows: 40px 40px;
+  grid-gap: 5px;
+  justify-content: center;
+}
+.social-item{
+  height:100%;
+  width:auto;
+}
+.social-item-a{
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 1;
+  grid-row-end: 1;
+}
+.social-item-b{
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 2;
+  grid-row-end: 2;
+}
+.social-item-c{
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 1;
+}
+.social-item-d{
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 2;
+}

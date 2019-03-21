@@ -1,3 +1,7 @@
+Bootstrap - Modern business
+
+Helios UW site
+=======
 # HeliosWebsite
 Website for the Helios renewable energy student organization at the University of Wisconsin-Madison.
 
@@ -30,3 +34,4 @@ Website for the Helios renewable energy student organization at the University o
 * [Yudai Yaguchi](#)
   * Role: Visualization Tool
   * Current Position: Student at UW-Madison
+
