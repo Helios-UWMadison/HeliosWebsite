@@ -7,6 +7,12 @@ body {
   padding-top: 56px;
 }
 
+.gradient{
+  background: #F47721;
+  background: -webkit-linear-gradient(to right, #FCB529, #D82A2A);
+  background: linear-gradient(to right, #FCB529, #D82A2A); padding:2px 0px 25px 0px;
+}
+
 .carousel-item {
   height: 65vh;
   min-height: 300px;
@@ -45,7 +51,7 @@ body {
 
 .social{
   padding-top:2rem;
-  flex-grow:2;
+  flex-grow:1;
   display:flex;
   justify-content: center;
 }
