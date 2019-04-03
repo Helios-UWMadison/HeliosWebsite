@@ -1,9 +1,9 @@
 .flex{
   display:flex;
   justify-content:center;
-  background: #F47721;
-  background: -webkit-linear-gradient(to right, #FCB529, #D82A2A);
-  background: linear-gradient(to right, #FCB529, #D82A2A);
+  background: #D82A2A;
+  /* background: -webkit-linear-gradient(to right, #FCB529, #D82A2A);
+  background: linear-gradient(to right, #FCB529, #D82A2A); */
 }
 
 .flex-item{
@@ -20,7 +20,7 @@
 }
 
 .active{
-  background-color: #d3a370;
+  background-color: #FCB529;
 }
 .panel{
   display:block;
