@@ -1,12 +1,11 @@
-/*!
- * Start Bootstrap - Modern Business (https://startbootstrap.com/template-overviews/modern-business)
- * Copyright 2013-2019 Start Bootstrap
- * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-logomodern-business-nav/blob/master/LICENSE)
- */
+/*
+
+Added CSS IDs and classes by Grant Kleinschmidt
+
+*/
 body {
   padding-top: 56px;
 }
-
 .gradient{
   background: #F47721;
   background: -webkit-linear-gradient(to right, #FCB529, #D82A2A);
@@ -36,7 +35,7 @@ body {
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .footer-item{
@@ -48,14 +47,18 @@ body {
   font-size:.8rem;
   padding-top:3rem;
 }
-
 .social{
   padding-top:2rem;
-  flex-grow:1;
   display:flex;
-  justify-content: center;
+  justify-content: flex-end;
+  height:100%;
 }
 .social-item{
+  flex-shrink: 200;
+}
+.social-picture{
+  justify-content: center;
+  padding-left: 25%;
   height:100%;
   width:auto;
 }

@@ -26,6 +26,6 @@ $(function(){
 
   var quoteSpace = $("#blog");
 
-  quoteSpace.html("New Blog Post is: Basic Blog posted on January 2018");
+  quoteSpace.html("Newest Blog Post is: Helios Intro Video posted in March 2018");
 
 });

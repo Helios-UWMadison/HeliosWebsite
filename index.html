@@ -21,6 +21,8 @@
   <!-- Custom styles for this template -->
   <link href="css/modern-business.css" rel="stylesheet">
 
+  <!-- CSS for flexBar for 5 sections -->
+  <link href="css/indexFlex.css" rel="stylesheet">
   <style>
     #quote {
       margin-top: 10px;
@@ -40,6 +42,7 @@
   <!-- Personal JS file -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
   <script src="js/quote.js"></script>
+  <script src="js/description.js"></script>
 
 
 </head>
@@ -137,7 +140,8 @@
           <li>Creating Cleaner energy for Madison</li>
         </ul>
         <p> Helios, a student led organization at UW-Madison, is focused on working on various projects to a) help create an impact in the city in the field of renewable energy and b) get more and more students involved in the process.</p>
-        <p>We work with students and University faculty of all fields and majors, from STEM to the Humanities, to accomplish these ambitious goals. If you enjoy working on various projects, want to create an impact on our University, and enjoy pizza,
+        <p>We work with students and University faculty of all fields and majors, from STEM to the Humanities, to accomplish these ambitious goals. If you enjoy working on various projects, want to create an impact on our University, and enjoy
+          pizza,
           this might be the right club for you!</p>
       </div>
       <div class="col-lg-6">
@@ -145,6 +149,37 @@
       </div>
     </div>
     <!-- /.row -->
+
+    <hr>
+
+
+    <!-- Description Box -->
+    <div class="flex">
+      <span class="flex-item">Energy</span>
+      <span class="flex-item">Engineering</span>
+      <span class="flex-item">Tech</span>
+      <span class="flex-item">Outreach</span>
+      <span class="flex-item">Finance</span>
+    </div>
+
+    <div class="panels">
+      <div class="panel">
+        <p>Energy</p>
+      </div>
+      <div class="panel" style="display: none">
+        <p>Engineering</p>
+      </div>
+      <div class="panel" style="display: none">
+        <p>Tech</p>
+      </div>
+      <div class="panel" style="display: none">
+        <p>Outreach</p>
+      </div>
+      <div class="panel" style="display: none">
+        <p>Finance</p>
+      </div>
+    </div>
+
 
     <hr>
 
@@ -163,10 +198,10 @@
 
     <p class=" text-center text-white footer-item ">Contact us at: <b>heliosuwmadison@gmail.com</b></p>
     <div class="social">
-      <a href="https://www.facebook.com/HeliosUW/"><img class="social-item" src="img/facebook.png"></a>
-      <a href="https://www.instagram.com/heliosuwmadison/"><img class="social-item" src="img/instagram.png"></a>
-      <a href="https://www.youtube.com/channel/UCgA1rYcuG116WqRfhwHvfkw"><img class="social-item" src="img/youtube.png"></a>
-      <a href="https://www.linkedin.com/company/heliosuwmadison/about/"><img class="social-item" src="img/linkedin.png"></a>
+      <div class="social-item"><a href="https://www.facebook.com/HeliosUW/"><img class="social-picture" src="img/facebook.png"></a></div>
+      <div class="social-item"><a href="https://www.instagram.com/heliosuwmadison/"><img class="social-picture" src="img/instagram.png"></a></div>
+      <div class="social-item"><a href="https://www.youtube.com/channel/UCgA1rYcuG116WqRfhwHvfkw"><img class="social-picture" src="img/youtube.png"></a></div>
+      <div class="social-item"><a href="https://www.linkedin.com/company/heliosuwmadison/about/"><img class="social-picture" src="img/linkedin.png"></a></div>
     </div>
     <p class="text-center text-white footer-item Copyright">Copyright &copy; UWHelios 2019</p>
 
