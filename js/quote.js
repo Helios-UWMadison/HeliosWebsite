@@ -26,6 +26,6 @@ $(function(){
 
   var quoteSpace = $("#blog");
 
-  quoteSpace.html("Newest Blog Post is: Helios Intro Video posted in March 2018");
+  quoteSpace.html("Newest Blog Post is: UW Madison's 2019 Rate Structure with MG&E Explained posted in January 2019");
 
 });
