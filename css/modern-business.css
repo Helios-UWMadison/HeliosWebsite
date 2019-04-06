@@ -1,12 +1,11 @@
-/*!
- * Start Bootstrap - Modern Business (https://startbootstrap.com/template-overviews/modern-business)
- * Copyright 2013-2019 Start Bootstrap
- * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-logomodern-business-nav/blob/master/LICENSE)
- */
+/*
+
+Added CSS IDs and classes by Grant Kleinschmidt
+
+*/
 body {
   padding-top: 56px;
 }
-
 .gradient{
   background: #F47721;
   background: -webkit-linear-gradient(to right, #FCB529, #D82A2A);
@@ -25,6 +24,7 @@ body {
 
 .portfolio-item {
   margin-bottom: 30px;
+  margin: 0 auto;
 }
 
 .footer{
@@ -36,7 +36,7 @@ body {
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .footer-item{
@@ -48,14 +48,78 @@ body {
   font-size:.8rem;
   padding-top:3rem;
 }
-
 .social{
   padding-top:2rem;
-  flex-grow:1;
   display:flex;
-  justify-content: center;
+  justify-content: flex-end;
+  height:100%;
 }
 .social-item{
+  flex-shrink: 200;
+}
+.social-picture{
+  justify-content: center;
+  padding-left: 25%;
   height:100%;
   width:auto;
+}
+.card {
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-radius: 0.25rem;
+}
+.leads{
+    border: 1px solid rgba(255,223,0, 0.5);
+}
+.card-title {
+  margin-bottom: 0.75rem;
+  font-size:1.3rem;
+}
+
+.card-img-top {
+  justify-content: center;
+  width: 200px;
+  height:200px;
+  border-top-left-radius: calc(0.25rem - 1px);
+  border-top-right-radius: calc(0.25rem - 1px);
+}
+.info{
+  border: 1px solid rgba(255,223,0, 0.5);
+}
+.rotate90 {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+.space{
+  height:6rem;
+}
+.profile{
+  margin-bottom:3rem;
+}
+.profilePic{
+  height:18rem;
+  width:auto;
+}
+
+.img-with-text{
+  text-align:center;
+  width:auto;
+}
+.img-with-text img{
+  display:block;
+  margin: 0 auto;
+}
+.row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+  justify-content: center;
 }

@@ -1,0 +1,36 @@
+.box {
+  transition: box-shadow .3s;
+  width: 200px;
+  height: 300px;
+  margin: 25px;
+  border: 1px solid #ccc;
+  border-bottom: 0;
+  background: #fff;
+  float: left;
+}
+.box:hover {
+  box-shadow: 0 0 11px rgba(66,66,66,.5);
+}
+.content {
+  background: #fff;
+  position: relative;
+  float: left;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.personDescriptions{
+  margin: 0;
+   border: 1px solid black;
+}
+.personDescriptions2{
+  margin: 0;
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+}
+.personDescriptions3{
+margin: 0;
+border-right: 1px solid black;
+border-left: 1px solid black;
+border-bottom: 1px solid black;
+}
