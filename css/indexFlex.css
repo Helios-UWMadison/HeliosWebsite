@@ -13,6 +13,7 @@
   justify-content:center;
   padding: 1rem 1rem;
   list-style: none;
+  border: 1px solid black;
 }
 
 .flex-item:hover{

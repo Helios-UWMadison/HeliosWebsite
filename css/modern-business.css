@@ -24,6 +24,7 @@ body {
 
 .portfolio-item {
   margin-bottom: 30px;
+  margin: 0 auto;
 }
 
 .footer{
@@ -63,20 +64,11 @@ body {
   width:auto;
 }
 .card {
-  position: relative;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  min-width: 0;
   word-wrap: break-word;
   background-color: #fff;
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.25);
   border-radius: 0.25rem;
-  justify-content: center;
-  padding-top:2%;
-  padding-left:5%;
 }
 .leads{
     border: 1px solid rgba(255,223,0, 0.5);
@@ -92,6 +84,9 @@ body {
   height:200px;
   border-top-left-radius: calc(0.25rem - 1px);
   border-top-right-radius: calc(0.25rem - 1px);
+}
+.info{
+  border: 1px solid rgba(255,223,0, 0.5);
 }
 .rotate90 {
     -webkit-transform: rotate(90deg);
@@ -118,4 +113,13 @@ body {
 .img-with-text img{
   display:block;
   margin: 0 auto;
+}
+.row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+  justify-content: center;
 }
