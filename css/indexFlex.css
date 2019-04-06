@@ -23,6 +23,9 @@
 .active{
   background-color: #FCB529;
 }
+.active:hover{
+  background-color: #FCB529;
+}
 .panel{
   display:block;
 }
