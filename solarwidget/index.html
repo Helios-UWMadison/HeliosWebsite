@@ -1,6 +1,146 @@
-<!DOCTYPE html>
-
+<!doctype html>
 <html>
-    <h1>This is the Solar Visualization Tool.</h1>
-</html>
 
+<head>
+	<title>Line Chart</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+	<script src="Chart.min.js"></script>
+	<script src="utils.js"></script>
+	<style>
+		canvas {
+			-moz-user-select: none;
+			-webkit-user-select: none;
+			-ms-user-select: none;
+		}
+	</style>
+</head>
+
+<body>
+	<div style="width:1000px">
+		<canvas id="chart1"></canvas>
+	</div>
+	<br>
+	<br>
+	Chart Type:
+	<select id="type">
+		<option value="line">Line</option>
+		<option value="bar">Bar</option>
+	</select>
+	<button id="update">update</button>
+	<script>
+		function randomNumber(min, max) {
+			return Math.random() * (max - min) + min;
+		}
+
+		function randomBar(date, lastClose) {
+			var open = randomNumber(lastClose * 0.95, lastClose * 1.05).toFixed(2);
+			var close = randomNumber(open * 0.95, open * 1.05).toFixed(2);
+			return {
+				t: date.valueOf(),
+				y: close
+			};
+		}
+
+		function covert(time, lastClose) {
+			return {
+				t: time,
+				y: lastClose
+			};
+		}
+
+		// HTTP request to get the data
+		const Http = new XMLHttpRequest();
+		const url='https://5ccbrssjje.execute-api.us-east-2.amazonaws.com/Beta/panels?panel_name=gordons';
+		Http.open("GET", url);
+		Http.send();
+		Http.onreadystatechange=(e)=>{
+			var jsonFormatted = JSON.parse(Http.responseText);
+
+			console.log(jsonFormatted);
+
+			let startDate = jsonFormatted["start_datetime"];
+			let endDate = jsonFormatted["end_datetime"];
+
+			let day = startDate.split('T')[0]
+			let duration = endDate.split('T')[1].split(":")[0] - startDate.split('T')[1].split(":")[0]
+
+			date2 = new Date(endDate)
+
+			var data2 = []
+			var enegyData = jsonFormatted['data']
+
+			for(let i = 0; i <= duration; i++) {
+				hourString = i < 10 ? '0'+i : i
+				queryDateString = day + 'T' + hourString + ":00:00Z"
+				data2.push(covert(i, enegyData[queryDateString]))
+		
+			}
+
+			// sethe the canvas size
+			var ctx = document.getElementById('chart1').getContext('2d');
+			ctx.canvas.width = 1200;
+			ctx.canvas.height = 800;
+
+			var color = Chart.helpers.color;
+			var cfg = {
+				type: 'bar',
+				data: {
+					datasets: [{
+						label: 'Hourly Power Output',
+						backgroundColor: color(window.chartColors.red).alpha(0.5).rgbString(),
+						borderColor: window.chartColors.red,
+						data: data2,
+						type: 'line',
+						pointRadius: 0,
+						fill: false,
+						lineTension: 0,
+						borderWidth: 2
+					}]
+				},
+				options: {
+					scales: {
+						xAxes: [{
+							type: 'time',
+							distribution: 'series',
+							ticks: {
+								source: 'data',
+								autoSkip: true
+							}
+						}],
+						yAxes: [{
+							scaleLabel: {
+								display: true,
+								labelString: 'Produced Energy (W)'
+							}
+						}]
+					},
+					tooltips: {
+						intersect: false,
+						mode: 'index',
+						callbacks: {
+							label: function(tooltipItem, myData) {
+								var label = myData.datasets[tooltipItem.datasetIndex].label || '';
+								if (label) {
+									label += ': ';
+								}
+								label += parseFloat(tooltipItem.value).toFixed(2);
+								return label;
+							}
+						}
+					}
+				}
+			};
+
+			var chart = new Chart(ctx, cfg);
+
+			document.getElementById('update').addEventListener('click', function() {
+				var type = document.getElementById('type').value;
+				chart.config.data.datasets[0].type = type;
+				chart.update();
+			});
+		}
+
+	</script>
+</body>
+
+</html>
